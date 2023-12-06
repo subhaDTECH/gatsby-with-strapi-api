@@ -38,7 +38,12 @@ export default UsingSSR
 
 export async function getServerData() {
   try {
-    const res = await fetch(`https://dog.ceo/api/breed/shiba/images/random`)
+    const res = await fetch('http://127.0.0.1:1337/api/products?populate=*', {
+      method: "GET",
+      headers: {Authorization: 'Bearer da4837945768265699d896d9dd155d69e12ef72b515dd0c1b6395b7cfe4ebe958ac7700c35c46ad1185c32913c0c7a5366b3a0fa346290fe96e825fe7856a6e9159c9e349657d3a530bd27082f552b6a318c0f344def542db360f53801ba4bd57cfa42deb71620a955771f55171d33ecf574c8d81a765eed0de5e12a0c204fa2'}
+    });
+    const dd= await res.json();
+    console.log(dd)
     if (!res.ok) {
       throw new Error(`Response failed`)
     }
@@ -46,6 +51,7 @@ export async function getServerData() {
       props: await res.json(),
     }
   } catch (error) {
+    console.log(error);
     return {
       status: 500,
       headers: {},
