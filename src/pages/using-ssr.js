@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -27,7 +26,7 @@ const UsingSSR = ({ serverData }) => {
         </a>
         .
       </p>
-      <Link to="/">Go back to the homepage</Link>
+      <Link to="/"> Go back to the homepage</Link>
     </Layout>
   )
 }
@@ -40,7 +39,7 @@ export async function getServerData() {
   try {
     const res = await fetch('http://127.0.0.1:1337/api/products?populate=*', {
       method: "GET",
-      headers: {Authorization: 'Bearer da4837945768265699d896d9dd155d69e12ef72b515dd0c1b6395b7cfe4ebe958ac7700c35c46ad1185c32913c0c7a5366b3a0fa346290fe96e825fe7856a6e9159c9e349657d3a530bd27082f552b6a318c0f344def542db360f53801ba4bd57cfa42deb71620a955771f55171d33ecf574c8d81a765eed0de5e12a0c204fa2'}
+      headers: {Authorization: 'Bearer 426f2132d5905ae0e35de49716bf1c4cafd06042123e205cf86f17d751418cc797c40973274c28d6718547ea82ae7dc2b9edcfd80bdfb96297446118e49beff77874d9422cd0fcd5c4a5e59f1236507fc3b39526162ace0d793db409e03e71614cbc3a752f050c5ca613df674303a3e3c27cbeee7d57497091800db596f58d8a'}
     });
     const dd= await res.json();
     console.log(dd)
@@ -59,3 +58,6 @@ export async function getServerData() {
     }
   }
 }
+
+
+// da4837945768265699d896d9dd155d69e12ef72b515dd0c1b6395b7cfe4ebe958ac7700c35c46ad1185c32913c0c7a5366b3a0fa346290fe96e825fe7856a6e9159c9e349657d3a530bd27082f552b6a318c0f344def542db360f53801ba4bd57cfa42deb71620a955771f55171d33ecf574c8d81a765eed0de5e12a0c204fa2
