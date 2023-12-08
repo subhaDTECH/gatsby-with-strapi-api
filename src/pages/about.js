@@ -72,7 +72,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
 <Layout>
    
-   <h1>Home Page</h1>  
+   <h1>About  Page</h1>  
 </Layout>
 )
 

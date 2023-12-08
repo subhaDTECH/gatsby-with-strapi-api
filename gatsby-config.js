@@ -29,14 +29,15 @@
 //        },
 //  }
 // // ,
-// //  `gatsby-plugin-image`,
-// //     {
-// //       resolve: `gatsby-source-filesystem`,
-// //       options: {
-// //         name: `images`,
-// //         path: `${__dirname}/src/images`,
-// //       },
-// //     },
+//  `gatsby-plugin-image`,
+
+//     {
+//       resolve: `gatsby-source-filesystem`,
+//       options: {
+//         name: `images`,
+//         path: `${__dirname}/src/images`,
+//       },
+//     },
 // //     `gatsby-transformer-sharp`,
 // //     `gatsby-plugin-sharp`,
 // //     {
@@ -75,12 +76,26 @@ module.exports = {
           // Define the content types you want to fetch from Strapi
           'product', // Adjust this to your content types in Strapi
           'blog',
+          'review'
           // Add other content types as needed
         ],
        
       },
     },
+
+
+     `gatsby-plugin-image`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     // Other Gatsby plugins
+    // //  `gatsby-plugin-image`,
+
     // ...
   ],
 };
